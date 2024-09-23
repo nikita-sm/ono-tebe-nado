@@ -1,18 +1,3 @@
-body {
-    width: 1100px;
-    margin: 0 auto;
-    padding-top: 92px;
-    padding-bottom: 88px;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul, ol {
-    list-style: none;
-}
-
 .header {
     width: 1052px;
     height: 105px;
@@ -28,8 +13,8 @@ ul, ol {
 .header__links-list {
     display: flex;
     justify-content: space-between;
+    gap: 28px;
     list-style: circle;
-    width: 392px;
 }
 
 .header__links-list-item {
@@ -60,10 +45,11 @@ ul, ol {
 }
 
 .address {
-    width: 241px;
+    max-width: 241px;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
+    font-style: normal; 
 }
 
 .header .address {
@@ -84,10 +70,10 @@ ul, ol {
     background-image: url(../images/cover.jpg);
     background-size: cover;
     width: 100%;
-    height: 757px;
     position: relative;
     padding-top: 165px;
     padding-left: 50px;
+    padding-bottom: 50px;
 }
 
 .cover * {
@@ -98,10 +84,7 @@ ul, ol {
 .overlay {
     position: absolute;
     background: rgba(0, 0, 0, 0.6);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     z-index: 1;
 }
 
@@ -118,7 +101,6 @@ ul, ol {
     letter-spacing: 60px;
 }
 
-
 .aligned-text_center {
     text-align: center;
     padding-top: 14px;
@@ -134,11 +116,10 @@ ul, ol {
     letter-spacing: 19px;
 }
 
-
 .aligned-text_right {
     text-align: center;
-    padding-top: 5px;
-    padding-left: 580px;
+    padding-top: 2px;
+    padding-left: 584px;
     letter-spacing: 60px;
 }
 
@@ -146,9 +127,12 @@ ul, ol {
     letter-spacing: 30px;
 }
 
+.no-letter-spacing {
+    letter-spacing: 30px;
+}
+
 .cover__description {
-    height: 51px;
-    margin-top: 125px;
+    margin-top: 129px;
     font-size: 22px;
     font-weight: 400;
     line-height: 28px;
@@ -157,13 +141,13 @@ ul, ol {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 25px;
+    padding-left: 27px;
     padding-right: 50px;
 }
 
 .cover__description-text {
     word-spacing: 19px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
 }
 
 .bet-button {
@@ -191,9 +175,10 @@ ul, ol {
 }
 
 .lots__card-list {
+    border: 1px solid greenyellow;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    gap: 24px;
     flex-wrap: wrap;
     margin-top: 25px;
 }
@@ -201,7 +186,7 @@ ul, ol {
 .lots__card-list-item {
     position: relative;
     width: 334px;
-    height: 563px;
+    min-height: 563px;
 }
 
 .card-link {
@@ -214,9 +199,11 @@ ul, ol {
     width: 100%;
     background-size: cover;
     height: 100%;
-    padding-top: 52px;
+    padding-top: 51px;
+    padding-bottom: 48px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .card * {
@@ -242,17 +229,15 @@ ul, ol {
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
-    width: 254px;
     text-decoration: underline;
-    margin: 0px auto;
+    padding: 0px 40px;
 }
 
 .card__text {
-    margin: auto auto 52px auto;
+    padding: 0px 40px 0px 40px;
     font-size: 20px;
     font-weight: 400;
-    width: 254px;
-    line-height: 23px;
+    line-height: 22px;
     letter-spacing: 0.5px;
 }
 
@@ -298,24 +283,22 @@ ul, ol {
 }
 
 .about__title {
-    height: 240px;
+    padding: 105px 0px 103px 22px;
     display: flex;
     align-items: center;
     font-size: 40px;
     text-transform: uppercase;
-    padding-top: 18px;
-    padding-left: 20px;
     letter-spacing: 0.4px;
 }
 
 .about__text {
-    width: 668px;
+    width: 100%;
+    max-width: 668px;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
-    padding-left: 22px;
-    padding-top: 11px;
-    letter-spacing: 1%;
+    padding-left: 25px;
+    padding-bottom: 0px;
 }
 
 .about__text p:not(:last-child) {
@@ -327,10 +310,10 @@ ul, ol {
     margin: 183px auto 0 auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 88px;
 }
 
 .footer__menu-list-item {
+    padding-left: 22px;
     font-size: 18px;
     font-weight: 400;
     line-height: 21.13px;
@@ -346,13 +329,19 @@ ul, ol {
 }
 
 .footer__social-list {
-    width: 240px;
     height: 48px;
     display: flex;
     justify-content: space-between;
+    gap: 47px;
 }
 
 .footer__social-list-item {
     width: 48px;
     height: 48px;
+}
+
+.footer__social-link {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
 }
